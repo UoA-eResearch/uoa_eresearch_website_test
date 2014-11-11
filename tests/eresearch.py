@@ -19,7 +19,7 @@ class EresearchTests(unittest.TestCase):
     assert browser.find_element_by_partial_link_text('University of Otago')
     assert browser.find_element_by_partial_link_text('University of Auckland')
     assert browser.find_element_by_partial_link_text('Faculty of Science')
-    assert browser.find_element_by_partial_link_text('Faculty of Engineering')
+    assert browser.find_element_by_partial_link_text('Facult of Engineering')
 
   @classmethod  
   def tearDownClass(cls):  
