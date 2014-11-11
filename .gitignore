@@ -1,0 +1,15 @@
+# Eclipse and PyDev files
+.DS_Store
+.project
+.pydevproject
+.settings
+
+# Compiled Python code
+*.py[coc]
+
+build
+dist
+*.egg-info
+
+ghostdriver.log
+virtualenv
