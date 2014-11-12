@@ -1,4 +1,5 @@
 from selenium import webdriver
+from util import execute
 import unittest
 import config
 import time
@@ -20,6 +21,27 @@ class EresearchTests(unittest.TestCase):
     assert browser.find_element_by_partial_link_text('University of Auckland')
     assert browser.find_element_by_partial_link_text('Faculty of Science')
     assert browser.find_element_by_partial_link_text('Faculty of Engineering')
+
+  def test_for_broken_links(self):
+    linkchecker_options = [
+      "--check-extern", 
+      "--no-warnings", 
+      #"--ignore-url='.*pbonnington.html$'", 
+      #"--ignore-url='^http://www.jfsowa.com'"
+    ]
+    cmd = '''linkchecker %s %s''' % (' '.join(linkchecker_options), config.url)
+    stdout, stderr, rc = execute(cmd, error_on_stderr=False, error_on_nonzero_rc=False)
+    if rc > 0:
+      print 'stdout:'
+      print '#' * 80
+      print stdout
+      print '#' * 80
+      print ''
+      print 'stderr:'
+      print '#' * 80
+      print stderr
+      print '#' * 80
+    assert (rc == 0)
 
   @classmethod  
   def tearDownClass(cls):  
