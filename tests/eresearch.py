@@ -26,8 +26,9 @@ class EresearchTests(unittest.TestCase):
     linkchecker_options = [
       "--check-extern", 
       "--no-warnings", 
-      #"--ignore-url='.*pbonnington.html$'", 
-      #"--ignore-url='^http://www.jfsowa.com'"
+      "--pause=1",
+      "--ignore-url='.*pbonnington.html$'", 
+      #"--ignore-url='^http://www.jfsowa.com'",
     ]
     cmd = '''linkchecker %s %s''' % (' '.join(linkchecker_options), config.url)
     stdout, stderr, rc = execute(cmd, error_on_stderr=False, error_on_nonzero_rc=False)
