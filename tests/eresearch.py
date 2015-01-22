@@ -26,6 +26,7 @@ class EresearchTests(unittest.TestCase):
     linkchecker_options = [
       "--check-extern", 
       "--no-warnings", 
+      "--timeout 120",
       "--pause=3",
       #"--ignore-url='.*pbonnington.html$'", 
       "--ignore-url='^http://www.jfsowa.com'",
@@ -46,7 +47,7 @@ class EresearchTests(unittest.TestCase):
 
   @classmethod  
   def tearDownClass(cls):  
-    config.driver.close()
+    config.driver.quit()
 
 if __name__ == '__main__':
   unittest.main()
