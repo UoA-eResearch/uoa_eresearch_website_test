@@ -28,7 +28,7 @@ class EresearchTests(unittest.TestCase):
       "--no-warnings", 
       "--timeout 120",
       "--pause=3",
-      #"--ignore-url='.*pbonnington.html$'", 
+      "--ignore-url='.*eResearch-2013.pdf$'", 
       "--ignore-url='^http://www.jfsowa.com'",
     ]
     cmd = '''linkchecker %s %s''' % (' '.join(linkchecker_options), config.url)
