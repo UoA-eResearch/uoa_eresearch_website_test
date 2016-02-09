@@ -5,7 +5,7 @@ set -e
 export PATH=/opt/python/bin:/opt/phantomjs/bin:$PATH
 
 venv="virtualenv"
-venv_command='virtualenv --no-site-packages '
+venv_command='virtualenv -p /opt/python/bin/python2.7 --no-site-packages '
 
 if [ ! -d ${venv} ]; then
   echo "############################ Create virtualenv ############################"
