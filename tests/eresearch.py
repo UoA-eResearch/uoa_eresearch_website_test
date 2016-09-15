@@ -28,6 +28,7 @@ class EresearchTests(unittest.TestCase):
       "--pause=3",
       "--ignore-url='.*eResearch-2013.pdf$'", 
       "--ignore-url='^http://www.jfsowa.com'",
+      "--ignore-url='^https://platforms.monash.edu/eresearch/*'",
     ]
     cmd = '''linkchecker %s %s''' % (' '.join(linkchecker_options), config.url)
     stdout, stderr, rc = execute(cmd, error_on_stderr=False, error_on_nonzero_rc=False)
