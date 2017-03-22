@@ -24,11 +24,12 @@ class EresearchTests(unittest.TestCase):
     linkchecker_options = [
       "--check-extern", 
       "--no-warnings", 
-      "--timeout 180",
+      "--timeout 60",
       "--pause=3",
       "--ignore-url='.*eResearch-2013.pdf$'", 
       "--ignore-url='^http://www.jfsowa.com'",
       "--ignore-url='^https://platforms.monash.edu/eresearch/*'",
+      "--ignore-url='^http://brain.oxfordjournals.org/content/130/9/2327.full'",
     ]
     cmd = '''linkchecker %s %s''' % (' '.join(linkchecker_options), config.url)
     print("%s" % cmd)
