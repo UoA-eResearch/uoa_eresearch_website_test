@@ -31,7 +31,7 @@ class EresearchTests(unittest.TestCase):
       "--ignore-url='^https://platforms.monash.edu/eresearch/*'",
     ]
     cmd = '''linkchecker %s %s''' % (' '.join(linkchecker_options), config.url)
-    print("%s", cmd)
+    print("%s" % cmd)
     stdout, stderr, rc = execute(cmd, error_on_stderr=False, error_on_nonzero_rc=False)
 
     if rc > 0:
