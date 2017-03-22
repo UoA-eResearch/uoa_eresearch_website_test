@@ -23,5 +23,6 @@ if [ ! -d ${venv} ]; then
 fi
 
 echo "############################ Run tests ############################"
+pwd
 source ${venv}/bin/activate
 ./run_integration_tests.sh

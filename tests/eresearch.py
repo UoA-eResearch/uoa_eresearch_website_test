@@ -24,7 +24,7 @@ class EresearchTests(unittest.TestCase):
     linkchecker_options = [
       "--check-extern", 
       "--no-warnings", 
-      "--timeout 60",
+      "--timeout 90",
       "--pause=3",
       "--ignore-url='.*eResearch-2013.pdf$'", 
       "--ignore-url='^http://www.jfsowa.com'",
