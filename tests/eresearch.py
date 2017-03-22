@@ -14,9 +14,9 @@ class EresearchTests(unittest.TestCase):
     browser = config.driver
     browser.get(config.url)
     browser.find_element_by_partial_link_text('Projects and research outcomes').click() 
-    browser.find_element_by_partial_link_text('Current projects and research outcomes').click() 
+    browser.find_element_by_partial_link_text('Research collaboration').click() 
     browser.switch_to_frame(0)
-    assert browser.find_element_by_partial_link_text('University of Auckland')
+    assert browser.find_element_by_partial_link_text('Faculty of Arts')
     assert browser.find_element_by_partial_link_text('Faculty of Science')
     assert browser.find_element_by_partial_link_text('Faculty of Engineering')
 
