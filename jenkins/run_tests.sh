@@ -13,6 +13,13 @@ if [ ! -d ${venv} ]; then
   ${venv_command} ${venv}
   source ${venv}/bin/activate
   pip install -r requirements.txt
+  source ${venv}/bin/activate
+  rm -rf linkchecker
+  git clone https://github.com/linkcheck/linkchecker.git
+  cd linkchecker
+  python setup.py install
+  rm -rf linkchecker
+  cd -
 fi
 
 echo "############################ Run tests ############################"
