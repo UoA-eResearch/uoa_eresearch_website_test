@@ -31,6 +31,8 @@ class EresearchTests(unittest.TestCase):
       "--ignore-url='^https://platforms.monash.edu/eresearch/*'",
       "--ignore-url='^http://brain.oxfordjournals.org/content/130/9/2327.full'",
       "--ignore-url='^https://www.auckland.ac.nz/en/about/the-university/atoz-directory.html'",
+      "--ignore-url='^https://www.auckland.ac.nz/en/admin/access-links/directory.html'",
+      "--ignore-url='^https://www.auckland.ac.nz/en/admin/quick-links/a-to-z-directory.html'",
     ]
     cmd = '''linkchecker %s %s''' % (' '.join(linkchecker_options), config.url)
     print("%s" % cmd)
