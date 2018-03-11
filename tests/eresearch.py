@@ -33,6 +33,8 @@ class EresearchTests(unittest.TestCase):
       "--ignore-url='^https://www.auckland.ac.nz/en/about/the-university/atoz-directory.html'",
       "--ignore-url='^https://www.auckland.ac.nz/en/admin/access-links/directory.html'",
       "--ignore-url='^https://www.auckland.ac.nz/en/admin/quick-links/a-to-z-directory.html'",
+      "--ignore-url='^http://www.eresearch.org.nz/summer_of_eresearch_2010'",
+      "--ignore-url='^http://www.eresearch.org.nz/nz-eresearch-symposium-2010'",
     ]
     cmd = '''linkchecker %s %s''' % (' '.join(linkchecker_options), config.url)
     print("%s" % cmd)
